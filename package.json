@@ -10,7 +10,9 @@
     "license": "MIT",
     "scripts": {
         "dev": "tsc --watch",
-        "build": "tsc",
+        "build": "yarn build:typescript && yarn build:clean",
+        "build:typescript": "tsc",
+        "build:clean": "clean-publish",
         "lint": "eslint --ignore-path .eslintignore --ext .ts src",
         "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
     },
@@ -33,19 +35,5 @@
         "lint-staged": "^13.1.0",
         "prettier": "^2.8.3",
         "typescript": "*"
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
-    },
-    "lint-staged": {
-        "*.{js,jsx,ts,tsx}": [
-            "yarn format",
-            "yarn lint"
-        ],
-        "*.{json,md,html,css}": [
-            "yarn format"
-        ]
     }
 }
