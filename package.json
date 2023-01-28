@@ -1,0 +1,9 @@
+{
+  "name": "esm-polyfills",
+  "version": "0.1.0",
+  "description": "Polyfills for ESM like __dirname, __filename, etc",
+  "main": "index.js",
+  "repository": "https://github.com/subbu963/esm-polyfills",
+  "author": "Aditya Subramanyam",
+  "license": "MIT"
+}
