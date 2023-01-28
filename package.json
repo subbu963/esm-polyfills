@@ -8,6 +8,10 @@
     "repository": "https://github.com/subbu963/esm-polyfills",
     "author": "Aditya Subramanyam",
     "license": "MIT",
+    "private": false,
+    "publishConfig": {
+        "access": "public"
+    },
     "scripts": {
         "dev": "tsc --watch",
         "build": "yarn build:typescript && yarn build:clean",
