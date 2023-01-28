@@ -17,7 +17,7 @@
         "dev": "tsc --watch",
         "build": "yarn build:typescript && yarn build:clean",
         "build:typescript": "tsc",
-        "build:clean": "clean-publish && cp -R dist package",
+        "build:clean": "clean-publish && mkdir package/dist && cp -avp dist/. package/",
         "lint": "eslint --ignore-path .eslintignore --ext .ts src",
         "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
         "postpublish": "rm -rf ./package"

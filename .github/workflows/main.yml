@@ -25,11 +25,11 @@ jobs:
         run: yarn && yarn build
         env:
           HUSKY: 0
+      - name: Publish package on NPM 📦
+        run: npm publish ./package
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name:  'Automated Version Bump'
         uses:  'phips28/gh-action-bump-version@master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Publish package on NPM 📦
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
