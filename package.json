@@ -1,6 +1,6 @@
 {
     "name": "@lordofthethings/esm-polyfills",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "Polyfills for ESM like __dirname, __filename, etc",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
