@@ -10,15 +10,17 @@
     "license": "MIT",
     "private": false,
     "publishConfig": {
-        "access": "public"
+        "access": "public",
+        "directory": "package"
     },
     "scripts": {
         "dev": "tsc --watch",
         "build": "yarn build:typescript && yarn build:clean",
         "build:typescript": "tsc",
-        "build:clean": "clean-publish",
+        "build:clean": "clean-publish && cp -R dist package",
         "lint": "eslint --ignore-path .eslintignore --ext .ts src",
-        "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
+        "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+        "postpublish": "rm -rf ./package"
     },
     "dependencies": {
         "get-caller-file": "^2.0.5"
