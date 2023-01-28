@@ -17,19 +17,19 @@ It becomes a pain to migrate each of these features to a ESM compatible feature 
 ### Using npm:
 
 ```bash
-$ npm install --save @lordofthethings/esm-polyfills
+$ npm install --save @subbu963/esm-polyfills
 ```
 
 ### Using yarn:
 
 ```bash
-$ yarn add @lordofthethings/esm-polyfills
+$ yarn add @subbu963/esm-polyfills
 ```
 
 ## Usage
 
 ```bash
-$ node -r @lordofthethings/esm-polyfills <your-script>.mjs
+$ node -r @subbu963/esm-polyfills <your-script>.mjs
 ```
 
 Then in your `<your-script>.mjs` file, globals like `__filename`, `__dirname`, `require` and `require.resolve` will be automatically available:
@@ -43,13 +43,13 @@ console.log(require('lodash'), require.resolve('lodash'), require('../package.js
 If you dont want to auto polyfill, then you can programmatically import them and use it your code like this:
 
 ```bash
-$ ESM_POLYFILLS_GLOBAL=false node -r @lordofthethings/esm-polyfills <your-script>.mjs
+$ ESM_POLYFILLS_GLOBAL=false node -r @subbu963/esm-polyfills <your-script>.mjs
 ```
 
 Then in your `<your-script>.mjs` file, do:
 
 ```javascript
-import { getFileName, getDirName, getRequire as _require_ } from '@lordofthethings/esm-polyfills';
+import { getFileName, getDirName, getRequire as _require_ } from '@subbu963/esm-polyfills';
 
 const __filename = getFileName();
 const __dirname = getDirName();
