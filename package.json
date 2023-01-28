@@ -23,6 +23,7 @@
         "@types/node": "16",
         "@typescript-eslint/eslint-plugin": "^5.0.0",
         "@typescript-eslint/parser": "^5.49.0",
+        "clean-publish": "^4.1.1",
         "cz-conventional-changelog": "^3.3.0",
         "eslint": "^8.0.1",
         "eslint-config-prettier": "^8.6.0",
