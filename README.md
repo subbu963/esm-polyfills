@@ -1,4 +1,4 @@
-[![Publish to NPM](https://github.com/subbu963/esm-polyfills/actions/workflows/main.yml/badge.svg)](https://github.com/subbu963/esm-polyfills/actions/workflows/main.yml)
+[![Build](https://github.com/subbu963/esm-polyfills/actions/workflows/main.yml/badge.svg)](https://github.com/subbu963/esm-polyfills/actions/workflows/main.yml)
 [![Install size](https://packagephobia.com/badge?p=@subbu963/esm-polyfills)](https://packagephobia.com/result?p=@subbu963/esm-polyfills)
 # esm-polyfills
 
