@@ -41,7 +41,7 @@ console.log('__dirname', __dirname);
 console.log(require('lodash'), require.resolve('lodash'), require('../package.json'));
 ```
 
-If you dont want to auto polyfill, then you can programmatically import them and use it your code like this:
+If you dont want to auto polyfill, then you can programmatically import them and use it in your code like this:
 
 ```bash
 $ ESM_POLYFILLS_GLOBAL=false node -r @subbu963/esm-polyfills <your-script>.mjs
