@@ -8,6 +8,8 @@ on:
       - 'package.json'
       - 'yarn.lock'
       - 'tsconfig.json'
+  workflow_dispatch:
+    ref: main
 jobs:
   build:
     runs-on: ubuntu-latest

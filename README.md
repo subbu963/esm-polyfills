@@ -1,5 +1,6 @@
 [![Build](https://github.com/subbu963/esm-polyfills/actions/workflows/main.yml/badge.svg)](https://github.com/subbu963/esm-polyfills/actions/workflows/main.yml)
 [![Install size](https://packagephobia.com/badge?p=@subbu963/esm-polyfills)](https://packagephobia.com/result?p=@subbu963/esm-polyfills)
+
 # esm-polyfills
 
 [ES module format](https://nodejs.org/api/esm.html#modules-ecmascript-modules) is becoming a norm these days with some of the popular modules published as only ES modules(example [got](https://github.com/sindresorhus/got), [ky](https://github.com/sindresorhus/ky)). It also comes with a lot of useful features like Top-level await, etc.
@@ -60,3 +61,14 @@ console.log('__filename', __filename);
 console.log('__dirname', __dirname);
 console.log(_require_('lodash'), _require_.resolve('lodash'));
 ```
+
+## Comparision with other libraries
+
+There are other libraries which serve the same purpose like:
+
+-   [@uscreen.de/common-esm](https://www.npmjs.com/package/@uscreen.de/common-esm)
+-   [esm-utils](https://www.npmjs.com/package/esm-utils)
+-   [desm](https://www.npmjs.com/package/desm)
+
+But these packages arent actually polyfills. They require you to manually import those libraries and use `__dirname`, `__filename`, etc from them.
+My polyfill aims to get away with this manual process and use those commonjs functionality directly in a ES module like you are in a commonjs module.
