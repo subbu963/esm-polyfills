@@ -1,6 +1,6 @@
 {
     "name": "@subbu963/esm-polyfills",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "description": "Polyfills for ESM like __dirname, __filename, etc",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
