@@ -19,7 +19,12 @@
         "polyfill",
         "polyfills",
         "esm",
-        "esmodules"
+        "esmodules",
+        "require",
+        "__filename",
+        "__dirname",
+        "require.resolve",
+        "commonjs"
     ],
     "scripts": {
         "dev": "tsc --watch",

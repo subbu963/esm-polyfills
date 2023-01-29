@@ -1,11 +1,11 @@
 # esm-polyfills
 
-[ESM modules](https://nodejs.org/api/esm.html#modules-ecmascript-modules) are becoming a norm these days with some of the popular modules published as only ESM modules(example [got](https://github.com/sindresorhus/got), [ky](https://github.com/sindresorhus/ky)). It also comes with a lot of useful features like Top-level await, etc.
+[ES module format](https://nodejs.org/api/esm.html#modules-ecmascript-modules) is becoming a norm these days with some of the popular modules published as only ES modules(example [got](https://github.com/sindresorhus/got), [ky](https://github.com/sindresorhus/ky)). It also comes with a lot of useful features like Top-level await, etc.
 
 But, there are a few features that CommonJS supports but ESM doesnt like [these](https://nodejs.org/api/esm.html#differences-between-es-modules-and-commonjs).
-It becomes a pain to migrate each of these features to a ESM compatible feature and its a lot of manual work. This polyfill tries to support those commonly used and feasible features in ESM modules.
+It becomes a pain to migrate each of these features to a ESM compatible feature and its a lot of manual work. This polyfill tries to support those commonly used and feasible features in ES modules.
 
-## Polyfills
+## Available polyfills
 
 -   [x] \_\_filename
 -   [x] \_\_dirname
@@ -43,7 +43,7 @@ console.log(require('lodash'), require.resolve('lodash'), require('../package.js
 If you dont want to auto polyfill, then you can programmatically import them and use it your code like this:
 
 ```bash
-$ ESM_POLYFILLS_GLOBAL=false node -r @subbu963/esm-polyfills <your-script>.mjs
+$ ESM_POLYFILLS_GLOBAL=false node <your-script>.mjs
 ```
 
 Then in your `<your-script>.mjs` file, do:
