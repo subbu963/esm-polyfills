@@ -1,3 +1,5 @@
+[![Build](https://github.com/subbu963/esm-polyfills/actions/workflows/main.yml/badge.svg)](https://github.com/subbu963/esm-polyfills/actions/workflows/main.yml)
+[![Install size](https://packagephobia.com/badge?p=@subbu963/esm-polyfills)](https://packagephobia.com/result?p=@subbu963/esm-polyfills)
 # esm-polyfills
 
 [ES module format](https://nodejs.org/api/esm.html#modules-ecmascript-modules) is becoming a norm these days with some of the popular modules published as only ES modules(example [got](https://github.com/sindresorhus/got), [ky](https://github.com/sindresorhus/ky)). It also comes with a lot of useful features like Top-level await, etc.
@@ -40,7 +42,7 @@ console.log('__dirname', __dirname);
 console.log(require('lodash'), require.resolve('lodash'), require('../package.json'));
 ```
 
-If you dont want to auto polyfill, then you can programmatically import them and use it your code like this:
+If you dont want to auto polyfill, then you can programmatically import them and use it in your code like this:
 
 ```bash
 $ ESM_POLYFILLS_GLOBAL=false node <your-script>.mjs
