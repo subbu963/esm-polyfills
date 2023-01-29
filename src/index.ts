@@ -7,10 +7,10 @@ if ('document' in global) {
     throw new Error('ESM polyfills not supported in browser environment');
 }
 declare global {
-    type __dirname = string;
-    type __filename = string;
+    var __dirname: string;
+    var __filename: string;
+    var require: NodeRequire;
 }
-
 function getFileNameFromUrl(url: string): string {
     return fileURLToPath(url);
 }
@@ -22,19 +22,21 @@ export function getDirName(): string {
     const url = getCallerFile();
     return dirname(getFileNameFromUrl(url));
 }
-export function _createRequireForFile(position = 2) {
+export function _createRequireForFile(position = 2): NodeRequire {
     const url = getCallerFile(position);
     return createRequire(url);
 }
-export function getRequire(modulePath: string) {
+export function getRequire(modulePath: string): any {
     const _require_ = _createRequireForFile(3);
     return _require_(modulePath);
 }
 Object.defineProperty(getRequire, 'resolve', {
-    get: () => (modulePath: string) => {
-        const _require_ = _createRequireForFile(3);
-        return _require_.resolve(modulePath);
-    },
+    get:
+        () =>
+        (...args: Parameters<NodeRequire['resolve']>): string => {
+            const _require_ = _createRequireForFile(3);
+            return _require_.resolve(...args);
+        },
 });
 if (process.env.ESM_POLYFILLS_GLOBAL !== 'false') {
     Object.defineProperty(globalThis, '__filename', {

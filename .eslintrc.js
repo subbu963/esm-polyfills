@@ -20,5 +20,7 @@ module.exports = {
         // e.g. "@typescript-eslint/explicit-function-return-type": "off",
         'prettier/prettier': 'error',
         '@typescript-eslint/indent': 'off',
+        'no-var': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
     },
 };
