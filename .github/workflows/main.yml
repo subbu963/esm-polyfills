@@ -8,6 +8,7 @@ on:
       - 'package.json'
       - 'yarn.lock'
       - 'tsconfig.json'
+      - .github/workflows/main.yml
   workflow_dispatch:
     ref: main
 jobs:
