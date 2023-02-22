@@ -23,15 +23,23 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - name: Install dependencies and build 🔧
-        run: yarn && yarn build
+      - name: Install dependencies
+        run: yarn
+        env:
+          HUSKY: 0
+      - name: Build 🔧
+        run: yarn build:typescript
+        env:
+          HUSKY: 0        
+      - name:  'Automated Version Bump'
+        uses:  'phips28/gh-action-bump-version@master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Package
+        run: yarn build:clean
         env:
           HUSKY: 0
       - name: Publish package on NPM 📦
         run: npm publish ./package
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name:  'Automated Version Bump'
-        uses:  'phips28/gh-action-bump-version@master'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
