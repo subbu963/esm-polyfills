@@ -7,6 +7,8 @@
 But, there are a few features that CommonJS supports but ESM doesnt like [these](https://nodejs.org/api/esm.html#differences-between-es-modules-and-commonjs).
 It becomes a pain to migrate each of these features to a ESM compatible feature and its a lot of manual work. This polyfill tries to support those commonly used and feasible features in ES modules.
 
+Also, i have a detailed it in my blog [here](https://lordofthethings.xyz/how-to-fix-referenceerror-__dirname/__filename/require-is-not-defined-in-es-module-scope/).
+
 ## Available polyfills
 
 -   [x] \_\_filename
